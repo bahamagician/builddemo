@@ -21,7 +21,7 @@ gulp.task('lint', function() {
 
 
 // Compile Our Sass
-gulp.task('sass', function() {
+gulp.task('sass', function() {    
     return gulp.src('assets/styles/*.scss')
         .pipe(sass())
         .pipe(autoprefixer({
@@ -29,12 +29,14 @@ gulp.task('sass', function() {
             cascade: false
         }))
         .pipe(gulp.dest('_css'))
+        .pipe(browserSync.stream())
         .pipe(cssmin())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('_css'))
+        .pipe(browserSync.stream())        
         .pipe(notify({
             message: "SASS Compiled"
-        }));
+        }));        
 });
 
 // Concatenate & Minify JS
