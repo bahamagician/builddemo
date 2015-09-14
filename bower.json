@@ -1,0 +1,27 @@
+{
+  "name": "Holiday Gift Guide",
+  "version": "0.0.0",
+  "homepage": "https://github.com/bahamagician/builddemo",
+  "authors": [
+    "Buttaz <cthronebury@gmail.com>"
+  ],
+  "description": "Holiday Gift Guide 2015",
+  "main": "index.html",
+  "moduleType": [
+    "node"
+  ],
+  "license": "None",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation": "~5.5.2",
+    "mixitup": "~2.1.10",
+    "susy": "~2.2.6"
+  }
+}
